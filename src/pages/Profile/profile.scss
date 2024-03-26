@@ -1,0 +1,20 @@
+.Profile {
+    
+    .userInfo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            
+        }
+
+        .nameschool {
+            p {
+                font-size: 3rem;
+            }
+        }
+    }
+}
