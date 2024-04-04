@@ -14,13 +14,10 @@ interceptorAxios.interceptors.request.use(
         }
         
         return config
-    },
-        (error) => {
-        
-        return Promise.reject(error)
     }
 )
 
+// 401일때 token refresh 하기위해 사용
 interceptorAxios.interceptors.response.use(
     (res) => { return res.data },
     async (error) => {
@@ -36,16 +33,16 @@ interceptorAxios.interceptors.response.use(
 
                 } catch (error) {
                     alert("세션이 만료되었습니다.")
-                    return Promise.reject("402")
+                    throw "402"
                 }
             
             case 500:
                 alert("500:서버로부터 에러가 발생했습니다.")
-                return Promise.reject(500)
+                throw 500
             default:
                 alert("default에러남.")
                 console.error(`default Error!! \n ${error}` )
-                return Promise.reject(error)
+                throw error
         }
     }
 );

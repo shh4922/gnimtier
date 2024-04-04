@@ -1,29 +1,75 @@
 header {
     display: flex;
-    // background-color: red;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    
-    h1 {
-        color: black;
-        font-size: 2.5rem;
+    width: 100%;
+    justify-content: center;
+    background-color: #1D2939;
+
+    // 컨텐트 최대넓이는 1920px 이 되도록 설정하기.
+    nav {
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.8rem 16rem;
+
+        // background-color: #fff;
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 900;
+            min-width: 8rem;
+        }
+
+        .icon-input {
+            flex: 1;
+            padding: 1rem 1rem;
+            background-color: #F9FAFB;
+            border-radius: 8px;
+            max-width: 78rem;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            .search {
+                color: black;
+                font-size: 1.6rem;
+                border: none;
+                outline: none;
+                flex: 1;
+            }
+            .search-icon {
+                font-size: 1.6rem;
+                color: #98A2B3;
+            }
+        }
+        
+        .login {
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+            background-color: #101828;
+            color: #fff;
+            height: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px 0px #101828;
+
+        }
+
+        .logout {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 1.6rem;
+
+        }
     }
-    a {
-        font-size: 1.6rem;
-        color: black;
-    }
-    .logout {
-        border: none;
-        outline: none;
-        background-color: transparent;
-        font-size: 1.6rem;
-    }
+
+
+
+
 }
 
 @media screen and (max-width: 780px) {
     header {
-        border-bottom: 1px solid #ebeef1;
+        background-color: red;
     }
 }
-

@@ -3,33 +3,39 @@ import { Link } from 'react-router-dom';
 import "./header.scss"
 
 import { currentUserStore } from '../../stores/userStore';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 function Header() {
-    const { currentUser, login, logout} = currentUserStore()
-    
+    const { currentUser, login, logout } = currentUserStore()
+    const [searchInput, setSearchInput] = useState<string>("")
+
     const clickLogout = () => {
-        logout() 
+        logout()
     }
-    const logplz = () => {
-        console.log(currentUser?.name)
-    }
-    const logplz2 = () => {
-        login()
+
+    const handleSearchInput = (e : React.ChangeEvent<HTMLInputElement>) => {
+        setSearchInput(e.target.value)
     }
 
     return (
         <header>
-            <Link to={"/"}><h1>그래서 님 티어가</h1></Link>
-            {
-                currentUser ? (
-                    <button className='logout' onClick={clickLogout}>로그아웃</button>
-                ) : (
-                    <Link to={"/login"}>로그인</Link>
-                )
-            }
-            
-            {/* <button onClick={logplz}>log</button>
-            <button onClick={logplz2}>로그인ed</button> */}
+            <nav>
+                <Link to={"/"}><h1>ㄱㄴㅌ</h1></Link>
+                <div className='icon-input'>
+                    <input className='search' placeholder='검색하기' value={searchInput} onChange={handleSearchInput}/>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='search-icon'/>
+                </div>
+                
+                {
+                    currentUser ? (
+                        <button className='logout' onClick={clickLogout}>로그아웃</button>
+                    ) : (
+                        <Link to={"/login"} className='login'>로그인</Link>
+                    )
+                }
+            </nav>
         </header>
     );
 }

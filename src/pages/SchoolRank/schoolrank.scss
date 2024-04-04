@@ -1,0 +1,36 @@
+.SchoolRank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+
+    .ranker-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1D2939;
+        width: 100%;
+        max-width: 1050px;
+        margin-top: 6rem;
+        padding: 1rem 2rem;
+        border-radius: 0.8rem;
+        
+        p {
+            font-size: 1.4rem;
+            color: #D0D5DD;
+        }
+    }
+
+    // 랭킹테이블 박스
+    .ranker-info {
+        display: flex;
+        flex-direction: column;
+        background-color: #1D2939;
+        max-width: 1050px;
+        width: 100%;
+        margin-top: 1.6rem;
+        padding: 2.4rem 3.4rem;
+        border-radius: 0.8rem;
+    }
+}

@@ -1,42 +1,29 @@
-import React from 'react';
-
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { Link } from 'react-router-dom';
-
-
+import RankCell from "../../components/RankCell/RankCell";
+import "./schoolrank.scss"
 
 function SchoolRank() {
     
 
-    const products = [
-        {
-            rank: "1",
-            schoolName: "강남초등학교",
-            tier: "다이아몬드 VI",
-        },
-        {
-            rank: "1",
-            schoolName: "강북중학교",
-            tier: "다이아몬드 VI",
-        },
-        {
-            rank: "1",
-            schoolName: "인성고등학교",
-            tier: "다이아몬드 VI",
-        },
-    ]
-
     return (
-        <div className="SchoolRank">
-            <DataTable value={products} >
-                <Column field='rank' header="순위"></Column>
-                <Column field='schoolName' header="학교"></Column>
-                <Column field='tier' header="티어"></Column>
-            </DataTable>
+        <article className="SchoolRank">
+            <section className="ranker-head">
+                <p>순위</p>
+                <p>프로필</p>
+                <p>티어</p>
+                <p>소속학교</p>
+            </section>
 
-            
-        </div>
+            <section className="ranker-info">
+                <RankCell/>
+                <RankCell/>
+                <RankCell/>
+                <RankCell/>
+                <RankCell/>
+                <RankCell/>
+                <RankCell/>
+                <RankCell/>
+            </section>
+        </article>
     );
 }
 

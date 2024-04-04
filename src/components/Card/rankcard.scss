@@ -2,10 +2,9 @@
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: 270px;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+    
     .rank {    
         font-size: 3rem;
         color: black;
@@ -13,38 +12,40 @@
         padding: 20px 10px;
         background-color: goldenrod;
     }
-    .img-box {
+    .circle-iconbox {
         width: 80px;
         height: 80px; 
         border: 3px solid #fff;
-        border-radius: 70%;
-        overflow: hidden;
-        position: absolute;
-        top: 100px;
+        position: relative;
+        top: -40px;
         left: 20px;
-        .profile-img {
+        // 원현이미지
+        overflow: hidden;
+        border-radius: 70%;
+        
+        .profile-icon {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover;    
         }
     }
     strong {
-        margin-top: 50px;
         font-size: 2rem;
         padding: 0 10px;
+        margin-top: -2rem;
     }
 
     .tier {
         font-size: 1.5rem;
-        padding: 0 10px;
+        padding: 0 1rem;
     }
 
     section {
-        margin-top: 20px;
+        margin-top: 1rem;
         display: flex;
         justify-content: space-between;
-        padding: 0 30px;
-        
+        padding: 0 3rem;
+        padding-bottom: 2rem;
         div {
             display: flex;
             align-items: center;   
@@ -52,7 +53,7 @@
             justify-content: space-between;
             align-items: center;
             height: 40px;
-            
+
             .result {
                 font-size: 1.5rem;
                 height: 70%;

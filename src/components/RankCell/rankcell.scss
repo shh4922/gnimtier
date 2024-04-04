@@ -1,0 +1,22 @@
+.rankcell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1D2939;
+    padding: 1.5rem 1rem;
+    border-radius: 0.8rem;
+    
+    .school-logo {
+        width: 48px;
+        height: 48px;
+    }
+    .tier-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    p {
+        font-size: 1.6rem;
+        color: #D0D5DD;
+    }
+}

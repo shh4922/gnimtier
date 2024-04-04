@@ -6,6 +6,7 @@ import Register from '../Register/Register';
 import RankerCard from '../../components/Card/RankerCard';
 import SchoolRank from '../SchoolRank/SchoolRank';
 import Profile from '../Profile/Profile';
+import Header from '../Header/Header';
 
 
 function Main() {

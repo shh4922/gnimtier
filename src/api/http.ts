@@ -14,6 +14,7 @@ export const get = async <T>(url: string, config?: AxiosRequestConfig): Promise<
     const response = await http.get<T>(url, config);
     return response.data;
 };
+
 export const post = async <T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> => {
     const response = await http.post<T>(url, data, config);
     return response.data;
