@@ -12,6 +12,7 @@ function RankCell() {
                 <p>921P</p>
             </div>
             <p>광주인성고등학교</p>
+            
         </div>
     )
 }

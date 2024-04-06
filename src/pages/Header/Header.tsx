@@ -15,7 +15,7 @@ function Header() {
         logout()
     }
 
-    const handleSearchInput = (e : React.ChangeEvent<HTMLInputElement>) => {
+    const handleSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchInput(e.target.value)
     }
 
@@ -24,10 +24,10 @@ function Header() {
             <nav>
                 <Link to={"/"}><h1>ㄱㄴㅌ</h1></Link>
                 <div className='icon-input'>
-                    <input className='search' placeholder='검색하기' value={searchInput} onChange={handleSearchInput}/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className='search-icon'/>
+                    <input className='search' placeholder='검색하기' value={searchInput} onChange={handleSearchInput} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='search-icon' />
                 </div>
-                
+
                 {
                     currentUser ? (
                         <button className='logout' onClick={clickLogout}>로그아웃</button>
