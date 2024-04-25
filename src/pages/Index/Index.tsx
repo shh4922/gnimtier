@@ -6,7 +6,6 @@ import axios from "axios";
 
 function Index() {
 
-    // e661f7573db7221e464e04f4727eb781
     useEffect(() => {
         getCurrentLocation()
     }, [])
@@ -26,12 +25,12 @@ function Index() {
     }
 
     const conformToLoadName = (x: number, y: number) => {
-        // 왜 반대임??
+        
         const param = { x: x.toString(), y: y.toString() }
         axios.get(`https://dapi.kakao.com/v2/local/geo/coord2regioncode.json`, {
             params: param,
             headers: {
-                Authorization: `KakaoAK 2e49bf8725d265a9e4bf22ec290568f5`
+                Authorization: `KakaoAK ${import.meta.env.VITE_KAKAO_APIKEY}`
             }
         }).then((res) => {
             console.log(res)
