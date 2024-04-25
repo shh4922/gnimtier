@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: black;
-
+    height: 100%;
+    background-color: var(--background-color);
+    
     .ranker-head {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #1D2939;
+        background-color: rgba($color: #39D89C, $alpha: 0.08);
         width: 100%;
         max-width: 1050px;
         margin-top: 6rem;
@@ -19,6 +19,20 @@
         p {
             font-size: 1.4rem;
             color: #D0D5DD;
+            text-align: center;
+        }
+        
+        .rank {
+            width: 10%;
+        }
+        .profile {
+            width: 30%;
+        }
+        .schoolName {
+            width: 20%;
+        }
+        .gntRank {
+            width: 40%;
         }
     }
 
@@ -26,11 +40,12 @@
     .ranker-info {
         display: flex;
         flex-direction: column;
-        background-color: #1D2939;
+        background-color: rgba($color: #39D89C, $alpha: 0.08);
         max-width: 1050px;
         width: 100%;
         margin-top: 1.6rem;
         padding: 2.4rem 3.4rem;
+        border: 1px solid #97F8C0;
         border-radius: 0.8rem;
     }
 }

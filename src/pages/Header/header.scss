@@ -2,7 +2,8 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    background-color: #1D2939;
+    background-color: var(--background-color);
+    border-bottom: solid 2px var(--main-color);
 
     // 컨텐트 최대넓이는 1920px 이 되도록 설정하기.
     nav {
@@ -11,31 +12,33 @@ header {
         max-width: 1920px;
         justify-content: space-around;
         align-items: center;
-        padding: 2.8rem 16rem;
+        padding: 2.4rem 1.6rem;
 
-        // background-color: #fff;
         h1 {
-            color: #fff;
+            color: var(--main-color);
             font-size: 2.5rem;
-            font-weight: 900;
+            font-weight: 400;
             min-width: 8rem;
         }
 
         .icon-input {
             flex: 1;
             padding: 1rem 1rem;
-            background-color: #F9FAFB;
+            background-color: var(--background-color);
+            border: solid 1px;
+            border-color: var(--main-color);
             border-radius: 8px;
             max-width: 78rem;
             margin-right: 10px;
             display: flex;
             align-items: center;
             .search {
-                color: black;
+                color: #fff;
                 font-size: 1.6rem;
                 border: none;
                 outline: none;
                 flex: 1;
+                background-color: var(--background-color);
             }
             .search-icon {
                 font-size: 1.6rem;
@@ -45,10 +48,12 @@ header {
         
         .login {
             font-size: 1.6rem;
-            padding: 1rem 2rem;
-            background-color: #101828;
+            padding: 1rem 4rem;
+            background-color: var(--background-color);
             color: #fff;
-            height: 40px;
+            max-height: 40px; // a태그라 height을 지정해줘야함.. 안그럼 늘어남.
+            border: solid 1px;
+            border-color: var(--main-color);
             border-radius: 10px;
             box-shadow: 0px 4px 8px 0px #101828;
 

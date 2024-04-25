@@ -22,7 +22,7 @@ function Header() {
     return (
         <header>
             <nav>
-                <Link to={"/"}><h1>ㄱㄴㅌ</h1></Link>
+                <Link to={"/"}><h1>ㄱㄴㅌ?</h1></Link>
                 <div className='icon-input'>
                     <input className='search' placeholder='검색하기' value={searchInput} onChange={handleSearchInput} />
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='search-icon' />

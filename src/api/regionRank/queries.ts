@@ -3,16 +3,15 @@ import axios from "axios";
 import { authStore } from "../../stores/authStore";
 import { interceptorAxios } from "../interceptor";
 
-export function useRegionRank() {
-    
+import { get } from "../http";
+export default function useRegionRank() {
+
     const { setToken } = authStore()
 
-    // return useQuery({
-    //     queryKey: ["regionRank"],
-    //     queryFn: (loginInput: loginInput) => interceptorAxios.get("www.naver.com"),
-    //     onError: (error) => {
-    //         console.error(error)
-    //     }
-    // })
+    return useQuery({
+        queryKey: ["regionRanks"],
+        // queryFn: () => get<>("www.naver.com"),
+                
+    })
     return 0
 }

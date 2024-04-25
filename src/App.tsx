@@ -7,10 +7,10 @@ import Login from './pages/Login/Login'
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <Header></Header>
       <Main></Main>
-    </>
+    </div>
 
   )
 }

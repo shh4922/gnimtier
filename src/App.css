@@ -1,9 +1,18 @@
+:root {
+  --background-color: #1D2939;
+  --main-color: #02A486;
+  /* --main-color-008: rgba($color: #39D89C, $alpha: 0.08); */
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
-
+.App {
+  height: 100vh;
+}
 
 a {
   text-decoration: none;
