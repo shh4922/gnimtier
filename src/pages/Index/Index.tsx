@@ -2,24 +2,40 @@ import { Link } from "react-router-dom";
 import "./index.scss"
 import IndexRankCell from "../../components/IndexRankCell/IndexRankCell";
 import { useEffect } from "react";
+import axios from "axios";
 
 function Index() {
 
+    // e661f7573db7221e464e04f4727eb781
     useEffect(() => {
         getCurrentLocation()
     }, [])
 
     const getCurrentLocation = () => {
-        navigator.geolocation.getCurrentPosition(handleSuccess,handleError)
+        navigator.geolocation.getCurrentPosition(handleSuccess, handleError)
     }
     const handleSuccess = (pos: GeolocationPosition) => {
         const { latitude, longitude } = pos.coords
+        conformToLoadName(longitude, latitude)
 
-        alert(`${latitude} ${longitude}`)
+        // alert(`${latitude} ${longitude}`)
     }
 
     const handleError = (err: GeolocationPositionError) => {
         alert(`실패`)
+    }
+
+    const conformToLoadName = (x: number, y: number) => {
+        // 왜 반대임??
+        const param = { x: x.toString(), y: y.toString() }
+        axios.get(`https://dapi.kakao.com/v2/local/geo/coord2regioncode.json`, {
+            params: param,
+            headers: {
+                Authorization: `KakaoAK 2e49bf8725d265a9e4bf22ec290568f5`
+            }
+        }).then((res) => {
+            console.log(res)
+        })
     }
 
 
