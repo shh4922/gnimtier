@@ -1,55 +1,41 @@
 .index {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
+    // height: 100%;
     background-color: var(--background-color);
-    height: 100%;
+
+
     .index-content {
         display: flex;
         width: 100%;
-        max-width: 1920px;
-        padding: 9.8rem 2rem;
         background-color: var(--background-color);
-        justify-content: center;
-        gap: 2.5rem;
+        justify-content: space-between;
         
-        section {
-            width: 100%;
-            max-width: 48rem;
-            max-height: 79rem;
-            display: flex;
-            flex-direction: column;
-            border: solid 1px var(--main-color);
-            border-radius: 20px;
-            padding: 1rem 1rem;
-            background-color: rgba($color: #02A486, $alpha: 0.08);
-            overflow-y: auto; /* 높이가 넘어가면 스크롤가능하도록*/
-            scrollbar-width: none; /* Firefox에서 스크롤바를 숨깁니다. */
-            color: #fff;
-            
-            h2 {
-                font-size: 2rem;
-                padding: 1rem 1rem;
-            }
+        .box {
+            width: 180px;
+            background-color: var(--background-color);
+            visibility: hidden;
+        }
 
-            a {
-                font-size: 1.4rem;
-                color: var(--main-color);
-                text-align: center;
-                border: solid 1px transparent;
-                border-radius: 10px;
-            }
-            a:hover {
-                background-color: rgba($color: #04BF8A, $alpha: 0.16);
-                border: solid 1px var(--main-color);
-            }
-        }        
+        .main-section {
+            flex: 1;
+            // 랭크를 감싸고있는 박스
+            
+        }
+        
     }
 }
 
-.myschool-rank {
-    .cell-cityRank {
-        filter: blur(4px);
+
+
+@media screen and (max-width: 720px) {
+
+    .index-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
-    
 }

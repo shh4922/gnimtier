@@ -16,6 +16,7 @@ function Profile() {
         if(!userName) {
             alert("없는유저")
         }
+        console.log(userName)
     },[])
     
 

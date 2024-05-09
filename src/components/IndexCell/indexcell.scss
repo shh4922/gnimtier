@@ -1,0 +1,66 @@
+.index-cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 1rem 1rem;    
+    border: solid 1px transparent;
+    border-radius: 10px;
+    
+    i {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    p {
+        font-size: 1.4rem;
+        color: var(--font-color-white);
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        
+    }
+    
+    .profile-icon {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    
+    p {
+        font-size: 1.4rem;
+        color: var(--font-color-white);
+        font-weight: 500;
+        
+    }
+
+    .profile-info {
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--font-color-gray);
+        }
+    }
+    .school-info {
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--font-color-gray);
+        }
+    }
+}
+.index-cell:hover {
+    background-color: rgba($color: #04BF8A, $alpha: 0.16);
+    border: solid 1px var(--main-color);
+}
+
+@media screen and (max-width: 1400px) {
+    .profile-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .school-info {
+        display: none;
+    }
+}

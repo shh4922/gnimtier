@@ -6,7 +6,7 @@ header {
     border-bottom: solid 2px var(--main-color);
 
     // 컨텐트 최대넓이는 1920px 이 되도록 설정하기.
-    nav {
+    .header-content {
         display: flex;
         width: 100%;
         max-width: 1920px;
@@ -56,7 +56,6 @@ header {
             border-color: var(--main-color);
             border-radius: 10px;
             box-shadow: 0px 4px 8px 0px #101828;
-
         }
 
         .logout {
@@ -74,7 +73,5 @@ header {
 }
 
 @media screen and (max-width: 780px) {
-    header {
-        background-color: red;
-    }
+    
 }

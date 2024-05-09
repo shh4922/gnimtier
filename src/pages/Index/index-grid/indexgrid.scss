@@ -1,0 +1,44 @@
+.grid-containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px ;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    // background-color: gray;
+    width: 100%;
+
+    .city-rank {
+        display: flex;
+        flex-direction: column;
+        border: solid 1px var(--main-color);
+        width: 100%;
+        
+        border-radius: 20px;
+        padding: 1rem 1rem;
+        background-color: rgba($color: #02A486, $alpha: 0.08);
+        overflow-y: auto;
+        /* 높이가 넘어가면 스크롤가능하도록*/
+        scrollbar-width: none;
+        /* Firefox에서 스크롤바를 숨깁니다. */
+        color: #fff;
+        position: relative;
+
+        h2 {
+            font-size: 2rem;
+            padding: 1rem 1rem;
+        }
+
+        a {
+            font-size: 1.4rem;
+            color: var(--main-color);
+            text-align: center;
+            border: solid 1px transparent;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            background-color: rgba($color: #04BF8A, $alpha: 0.16);
+            border: solid 1px var(--main-color);
+        }
+    }
+}

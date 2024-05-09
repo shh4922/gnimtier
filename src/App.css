@@ -1,17 +1,19 @@
 :root {
   --background-color: #1D2939;
   --main-color: #02A486;
-  /* --main-color-008: rgba($color: #39D89C, $alpha: 0.08); */
+  --font-color-white: #E8E8E8;
+  --font-color-gray: #98A2B3;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
+
 .App {
-  height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
 }
 
 a {

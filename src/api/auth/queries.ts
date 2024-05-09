@@ -9,14 +9,13 @@ export function useLogin() {
     
     const { setToken } = authStore()
 
-    // const config =
+    
     return useMutation({        
         mutationFn: (loginInput: loginInput) => post<Token>('/login', loginInput, ),
         onSuccess: (token) => {
             if (!token) {
                 throw Error("Token값이 안들어있음")
             }
-        
             setToken(token)
         },
         onError: (error) => {

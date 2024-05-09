@@ -1,3 +1,4 @@
+import Pagenation from "../../components/Pagenation/Pagenation";
 import RankCell from "../../components/RankCell/RankCell";
 import "./schoolrank.scss"
 
@@ -22,6 +23,7 @@ function SchoolRank() {
                 <RankCell/>
                 <RankCell/>
             </section>
+            <Pagenation/>
         </article>
     );
 }
